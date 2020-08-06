@@ -1,14 +1,8 @@
 const express = require('express'); 
 const app = express(); 
-
 const bodyParser = require('body-parser')
 
-// const low = require('lowdb')
-// const FileSync = require('lowdb/adapters/FileSync')
-
-// const adapter = new FileSync('db.json')
-// const db = low(adapter)
-app.set('views', './views'); // Thư mục views nằm cùng cấp với file app.js
+app.set('views', './views'); // Thư mục views nằm cng cấp với file app.js
 app.set('view engine', 'pug'); // Sử dụng pug làm view engine
 
 
