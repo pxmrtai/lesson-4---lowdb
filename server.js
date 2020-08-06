@@ -1,14 +1,25 @@
 const express = require('express'); 
 const app = express(); 
+
+const bodyParser = require('body-parser')
+
+// const low = require('lowdb')
+// const FileSync = require('lowdb/adapters/FileSync')
+
+// const adapter = new FileSync('db.json')
+// const db = low(adapter)
 app.set('views', './views'); // Thư mục views nằm cùng cấp với file app.js
 app.set('view engine', 'pug'); // Sử dụng pug làm view engine
+
+
+app.use(bodyParser.json()) // for parsing application/json
+app.use(bodyParser.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
 
 var todos =[
             {name: 'đi chợ'},
             {name: 'nấu cơm'},
             {name: 'rửa bát'},
-            {name: 'học coderX'}
-        
+            {name: 'học coderX'}  
         ]
 
         
