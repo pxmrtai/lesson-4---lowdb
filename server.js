@@ -26,6 +26,13 @@ app.get('/todos',function(req,res){
     todos : matched
   })
 })
+app.get('/todos/create',function(req,res){
+    res.render('todos/create')
+})
+app.post('/todos/create',function(req,res){
+    todos.push(req.body);
+    res.redirect('back')
+})
 
 
 app.listen(process.env.PORT, () => {
